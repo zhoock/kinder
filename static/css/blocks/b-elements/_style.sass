@@ -1,0 +1,117 @@
+// Elements
+//
+//
+
+
+=sun($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top + px, $left + px, sun-body1)
+
+    .b-sun__sunshine-left
+        +element-pos(sun-sunshine-left)
+
+    .b-sun__sunshine-right
+        +element-pos(sun-sunshine-right)
+
+=alarm-clock($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top + px, $left + px)
+
+    .b-alarm-clock__body
+        +element-pos(alarm-clock-body)
+
+    .b-alarm-clock__bell-left
+        +element-pos(alarm-clock-bell-left)
+
+    .b-alarm-clock__bell-right
+        +element-pos(alarm-clock-bell-right)
+
+=owl-mom($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top + px, $left + px)
+
+    .b-owl-mom__body
+        +element-pos(owl-mom-body)
+
+    .b-owl-mom__eyes
+        +element-pos(owl-mom-eyes)
+
+    .b-owl-mom__wing-left
+        +element-pos(owl-mom-wing-left)
+
+    .b-owl-mom__wing-right
+        +element-pos(owl-mom-wing-right)
+
+    .b-owl-mom__legs
+        +element-pos(owl-mom-legs)
+
+=owl-boy($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top + px, $left + px)
+
+    .b-owl-boy__body
+        +element-pos(owl-boy-body)
+
+    .b-owl-boy__eyes
+        +element-pos(owl-boy-eyes)
+
+    .b-owl-boy__eyelids
+        +element-pos(owl-boy-eyelids)
+
+    .b-owl-boy__nose
+        +element-pos(owl-boy-nose)
+
+    .b-owl-boy__wing-left
+        +element-pos(owl-boy-wing-left)
+
+    .b-owl-boy__wing-right
+        +element-pos(owl-boy-wing-right)
+
+    .b-owl-boy__legs
+        +element-pos(owl-boy-legs)
+
+=owl-daughter($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top + px, $left + px)
+
+    .b-owl-daughter__body
+        +element-pos(owl-daughter-body)
+
+    .b-owl-daughter__bow
+        +element-pos(owl-daughter-bow)
+
+    .b-owl-daughter__eyes
+        +element-pos(owl-daughter-eyes)
+
+    .b-owl-daughter__eyelids
+        +element-pos(owl-daughter-eyelids)
+
+    .b-owl-daughter__nose
+        +element-pos(owl-daughter-nose)
+
+    .b-owl-daughter__wing-left
+        +element-pos(owl-daughter-wing-left)
+
+    .b-owl-daughter__wing-right
+        +element-pos(owl-daughter-wing-right)
+
+    .b-owl-daughter__legs
+        +element-pos(owl-daughter-legs)
+
+=cloud-cheerful($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top + px, $left + px, cloud-cheerful-body)
+
+    .b-cloud-cheerful__eyes
+        +element-pos(cloud-cheerful-eyes)
+
+    .b-cloud-cheerful__hand-left
+        +element-pos(cloud-cheerful-hand-left)
+
+    .b-cloud-cheerful__hand-right
+        +element-pos(cloud-cheerful-hand-right)
+
+=btn-voce($width, $height, $top, $left)
+    +element(absolute, $width + px, $height + px, $top, $left)
+    background: transparent url(/images/buttons-voice.png) no-repeat
+    content: ""
+    +translateX(-50%)
+    cursor: pointer
+    +transition(background .1s linear)
+
+    &:hover
+        background: transparent url(/images/buttons-voice.png) no-repeat 0 -150px

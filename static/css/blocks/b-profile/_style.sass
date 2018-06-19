@@ -1,0 +1,96 @@
+// Profile
+//
+//
+
+.profile
+    background: white
+
+    .b-container
+        .b-content
+            h1
+                @extend %heading
+
+            .b-profile
+                +rhythm-margins(2, 0)
+
+                &__user-photo
+                    width: 146px
+                    height: 146px
+                    border-radius: 50%
+
+                &__user-info
+                    +adjust-font-size-to(2.4rem)
+                    color: $dark-blue
+                    padding-left: 22px
+                    display: table
+                    height: 146px
+
+                    p
+                        display: table-cell
+                        vertical-align: middle
+
+                        span
+                            display: block
+                            color: #505050
+                            +adjust-font-size-to(1.8rem)
+
+                            &:nth-of-type(1)
+                                +rhythm-margins(0, 1)
+
+                &__edit
+                    line-height: 146px
+
+            h2
+                +adjust-font-size-to(3.6rem)
+
+            h3
+                +adjust-font-size-to(3rem)
+
+.competition
+    &.competition--border
+        .b-table__td
+            border-bottom: dotted 1px #a7a7a7
+
+    .b-table__td
+        border: none
+        color: #959595
+
+        .play
+            float: left
+            margin-top: 14px
+            width: 73px
+            height: 73px
+
+        .written
+            +adjust-font-size-to(1.4rem)
+
+
+        .info
+            +adjust-font-size-to(1.4rem)
+            padding-left: 90px
+            height: 73px
+
+            &.info--small
+                height: 87px
+                line-height: 87px
+
+            .approved
+                color: $dark-blue
+
+            .name-cartoon
+                +adjust-font-size-to(1.8rem)
+                color: #505050
+
+        .likes
+            width: 50px
+            text-align: center
+
+            i
+                margin-left: 0
+            .like
+                display: block
+                color: #505050
+                +adjust-font-size-to(1.6rem)
+                margin-top: 8px
+
+

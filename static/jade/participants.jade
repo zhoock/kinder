@@ -1,0 +1,92 @@
+//- participants.jade
+
+mixin winners-list-all
+	.b-table__tr
+		.b-table__td.text-center
+			.price-prize.price-prize--blue 500Р
+			.price-prize.price-prize--red 1000Р
+		.b-table__td: img(src="/static/images/winner-icon-small.png")
+		.b-table__td Вера, 4 года и мама озвучили мультфильм
+			br
+			| «Как совята умываться учились»
+		.b-table__td 9879
+			i.icon-heart
+		.b-table__td: a(href="#"): img(src="/static/images/list-winner-btn.png")
+		.b-table__td
+
+doctype html
+html(lang="ru")
+	- var title = "kinder - участники"
+	include ../includes/_head
+
+	body.participants
+		include ../includes/_header
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							a(href="/")
+								h1 Вкусное утро с
+								img(src="/images/logo.svg")
+							h2 Все участники
+
+							// owl-daughter
+						.b-owl-daughter
+							.b-owl-daughter__wing-left
+							.b-owl-daughter__wing-right
+							.b-owl-daughter__body
+							.b-owl-daughter__bow
+							.b-owl-daughter__eyes
+							.b-owl-daughter__eyelids
+							.b-owl-daughter__nose
+							.b-owl-daughter__legs
+						// /owl-daughter
+
+						// owl-boy
+						.b-owl-boy
+							.b-owl-boy__wing-left
+							.b-owl-boy__wing-right
+							.b-owl-boy__body
+							.b-owl-boy__eyes
+							.b-owl-boy__eyelids
+							.b-owl-boy__nose
+							.b-owl-boy__legs
+						// /owl-boy
+
+				.row
+					.small-11.small-centered.columns
+
+						// list winners
+						.b-list-winners
+							.b-table
+								- var n = 0
+								while n < 5
+									+winners-list-all
+									- n++
+						// /list winners
+
+				.row
+					.small-11.small-centered.columns
+						.b-pagination
+							.row
+								.small-3.text-center.columns
+									a(href="#"): img( src="/images/prev-btn-blue.png")
+								.small-6.text-center.columns
+									ul.b-pagination__pages
+										li: a(href="#") 1
+										li: a(href="#") 2
+										li.active: a(href="#") 3
+										li: a(href="#") 4
+										li: a(href="#") 5
+
+								.small-3.text-center.columns
+									a(href="#"): img( src="/images/next-btn-blue.png")
+
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

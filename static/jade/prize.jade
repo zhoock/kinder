@@ -1,0 +1,140 @@
+//- prize.jade
+
+doctype html
+html(lang="ru")
+	- var title = "kinder - призы"
+	include ../includes/_head
+
+	body.prize
+		- var currentUrl = "призы"
+		include ../includes/_header
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							a(href="/")
+								h1 Вкусное утро с
+								img(src="/images/logo.svg")
+
+						// sun
+						.b-sun
+							.b-sun__sunshine-left
+							.b-sun__sunshine-right
+						// /sun
+
+				.row
+					.small-10.columns.small-centered
+
+						// main prize
+						section.b-main-prize
+							h1 Главный приз
+							p экскурсию на студию мультипликации
+								br
+								| "Маша и медведь".
+							p Узнайте, как выиграть приз
+								br
+								| в разделе "
+								a(href="#") Правила
+								| "
+						// /main prize
+
+						// alarm-clock
+						.b-alarm-clock
+							.b-alarm-clock__body
+							.b-alarm-clock__bell-left
+							.b-alarm-clock__bell-right
+						// /alarm-clock
+
+						// owl-boy
+						.b-owl-boy
+							.b-owl-boy__wing-left
+							.b-owl-boy__wing-right
+							.b-owl-boy__body
+							.b-owl-boy__eyes
+							.b-owl-boy__eyelids
+							.b-owl-boy__nose
+							.b-owl-boy__legs
+						// /owl-boy
+
+						// lark-boy
+						.b-lark-boy
+						// /lark-boy
+
+				.row
+					.small-6.columns
+						- var num = 1
+						- var amount = 3
+						- var headingText1 = "самый"
+						- var headingText2 = "креативный"
+						- var price = 10000
+						include ../includes/_block-prize
+
+					.small-6.columns
+						- var num = 1
+						- var amount = 3
+						- var headingText1 = "самый"
+						- var headingText2 = "смешной"
+						- var price = 10000
+						include ../includes/_block-prize
+
+						// owl-mom
+						.b-owl-mom
+							.b-owl-mom__wing-left
+							.b-owl-mom__wing-right
+							.b-owl-mom__body
+							.b-owl-mom__eyes
+							.b-owl-mom__legs
+						// /owl-mom
+
+				.row
+					.small-6.columns.small-centered
+						- var num = 1
+						- var amount = 3
+						- var headingText1 = "самый"
+						- var headingText2 = "трогательный"
+						- var price = 10000
+						- var shift = "shift"
+						include ../includes/_block-prize
+
+						// cloud-cheerful
+						.b-cloud-cheerful
+							.b-cloud-cheerful__hand-left
+							.b-cloud-cheerful__hand-right
+							.b-cloud-cheerful__eyes
+						// /cloud-cheerful
+
+				.row.small-collapse
+					.small-6.columns
+						- var num = 2
+						- var amount = 300
+						- var headingText1 = "гарантированные"
+						- var headingText2 = "призы"
+						- var price = 1000
+						- var variant = "variant"
+						include ../includes/_block-prize
+
+						// microphone
+						.b-microphone
+						// /microphone
+
+						// headphones
+						.b-headphones
+						// /headphones
+
+					.small-6.columns
+						- var num = 3
+						- var amount = 500
+						- var headingText1 = "гарантированные"
+						- var headingText2 = "призы"
+						- var price = 500
+						- var variant = "variant"
+						include ../includes/_block-prize
+
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

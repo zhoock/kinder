@@ -1,0 +1,149 @@
+// Winners
+//
+//
+
+.winners
+    background: transparent url(/images/winners-bg.jpg) no-repeat center top
+
+    .b-container
+        .b-content
+            h1
+                @extend %heading
+
+            h2
+                +adjust-font-size-to(4.8rem)
+                font-weight: $bold
+                text-transform: uppercase
+                +rhythm-margins(4, 0)
+
+            .b-main-winner
+                margin: 183px 0 100px 0
+                color: white
+                font-weight: $bold
+                font-family: $header-font-family
+
+                h1
+                    color: white
+                    +adjust-font-size-to(6rem)
+                    +text-shadow(#4b7782 0 2px 3px)
+                    +rhythm-margins(0, 0)
+
+                img
+                    +rhythm-margins(0, 4)
+
+                .btn-voce
+                    +btn-voce(130, 130, 34%, 50%)
+
+                p:nth-of-type(1)
+                    +adjust-font-size-to(2rem)
+                    text-transform: uppercase
+
+                .user
+                    +adjust-font-size-to(2.4rem)
+
+                    .icon-heart
+                        +adjust-font-size-to(3.6rem)
+                        margin-right: 12px
+                        position: relative
+                        top: 6px
+
+            .b-block-winner
+                &--creative
+                    background: transparent url(/images/winner-creative.png) no-repeat center 30px
+
+                &--funny
+                    background: transparent url(/images/winner-fanny.png) no-repeat center 30px
+
+                &--touching
+                    background: transparent url(/images/winner-touching.png) no-repeat center 30px
+
+                h1
+                    +adjust-font-size-to(6rem)
+                    text-transform: none
+                    padding-bottom: 200px
+
+                &__description
+                    position: absolute
+                    top: 200px
+                    left: 620px
+                    +adjust-font-size-to(1.6rem)
+                    font-family: $header-font-family
+
+                    p
+                        font-weight: $bold
+
+                        .sum
+                            color: #ec551a
+                            text-transform: uppercase
+
+                .b-block-party
+                    position: relative
+                    top: -40px
+                    height: 230px
+                    +rhythm-margins(0, 2)
+
+                    img
+                        position: relative
+                        top: 22px
+                        width: 307px
+                        height: 190px
+
+                    .b-block-party__frame
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        left: auto
+                        top: 0
+                        background: transparent url(/images/party-block-bg.png) no-repeat
+                        background-size: contain
+
+                    .btn-voce
+                        +btn-voce(130, 130, 68%, 50%)
+
+                .b-block-party__user
+                    .user
+                        color: #505050
+                        +adjust-font-size-to(1.6rem)
+
+                        .icon-heart
+                            color: #009ee3
+                            +adjust-font-size-to(3.6rem)
+                            position: relative
+                            top: 16px
+                            line-height: 22px
+                            margin-left: 8px
+
+            .info-nav
+                width: 612px
+                position: absolute
+                left: 50%
+                +translateX(-50%)
+                top: -38px
+                z-index: 1
+
+                li
+                    float: left
+
+                    &.current
+                        a
+                            +button-variant(white, linear-gradient($blue 20%, #2aaeff 100%), #1d8dda, white, #3a84a3, darken($blue, 10%))
+
+                    &:nth-of-type(1)
+                        a
+                            border-top-right-radius: 0
+                            border-bottom-right-radius: 0
+
+                    &:nth-of-type(2)
+                        a
+                            border-radius: 0
+
+                    &:nth-of-type(3)
+                        a
+                            border-top-left-radius: 0
+                            border-bottom-left-radius: 0
+
+                    a
+                        @extend .btn
+                        font-size: 1.8rem !important
+                        +button-variant(#009ee3, white, #e1e1e1, white, #a3a3a3, darken($blue, 10%))
+                        +box-shadow(#e1e1e1 0 -4px 0 0 inset, #c6c6c6 0 0 1px 0 inset)

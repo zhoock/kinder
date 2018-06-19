@@ -1,0 +1,86 @@
+//- product.jade
+doctype html
+html(lang="ru")
+	- var title = "kinder - продукт"
+	include ../includes/_head
+
+	body.product
+		- var currentUrl = "продукт"
+		include ../includes/_header
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							a(href="/")
+								h1 Вкусное утро с
+								img(src="/images/logo.svg")
+
+						// sun
+						.b-sun
+							.b-sun__sunshine-left
+							.b-sun__sunshine-right
+						// /sun
+
+						// kinder
+						.b-kinder--big
+						// /kinder
+
+				.row
+					.small-10.columns.small-centered
+
+						// lark-mom
+						.b-lark-mom
+						// /lark-mom
+
+						// lark-boy
+						.b-lark-boy
+						// /lark-boy
+
+						// alarm-clock
+						.b-alarm-clock
+							.b-alarm-clock__body
+							.b-alarm-clock__bell-left
+							.b-alarm-clock__bell-right
+						// /alarm-clock
+
+						// blades
+						.b-blades
+						// /blades
+
+						// owl-mom
+						.b-owl-mom
+							.b-owl-mom__wing-left
+							.b-owl-mom__wing-right
+							.b-owl-mom__body
+							.b-owl-mom__eyes
+							.b-owl-mom__legs
+						// /owl-mom
+
+						// owl-daughter
+						.b-owl-daughter
+							.b-owl-daughter__wing-left
+							.b-owl-daughter__wing-right
+							.b-owl-daughter__body
+							.b-owl-daughter__bow
+							.b-owl-daughter__eyes
+							.b-owl-daughter__eyelids
+							.b-owl-daughter__nose
+							.b-owl-daughter__legs
+						// /owl-daughter
+
+						// prod-description
+						.b-prod-description
+							p Молоко и продукты с молоком - неотъемлемая часть хорошего завтрака для ребенка.  А дети всегда хотят еще что-нибудь вкусненькое. И  поэтому утром мне нужен вкусный продукт с молоком, чтобы дать его ребенку и разнообразить его завтрак. Здорово, что есть Киндер Молочный Ломтик! Молочный Ломтик - это вкусный бисквит с капелькой меда и нежной молочной начинкой, который так нравится моему ребенку! И он отлично дополняет его завтрак. Молочный ломтик на 40% состоит из молока и, как молоко, хранится в холодильнике. Продукт не содержит красителей и консервантов. Вот почему я уверена, что даю моему ребенку свежий продукт. А «Киндер» гарантирует высокое качество!
+								br
+								strong Киндер Молочный Ломтик. Вкусно-молочный продукт!
+
+
+						// /prod-description
+
+		// /container
+		// footer
+		include ../includes/_footer
+		// /footer

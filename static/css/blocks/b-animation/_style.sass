@@ -1,0 +1,372 @@
+// Animation
+//
+//
+
+
+.b-blades
+    +animation(blades 6s linear infinite)
+
+    +keyframes(blades)
+        100%
+            +rotate(360deg)
+
+.b-owl-mom
+    +animation(owl-mom 2s ease-in forwards)
+
+    +keyframes(owl-mom)
+        0%
+            +transform(translate(-18px, 18px) rotate(3deg))
+            +transform-origin(90%, 80%)
+
+        50%
+            +transform(translate(-8px, -18px) rotate(3deg))
+
+        80%
+            +transform(translate(-8px, 12px) rotate(-3deg))
+
+        100%
+            +transform(translate(0, 0) rotate(0deg))
+
+    &__eyes
+        +animation(owl-mom__eyes 3s linear forwards)
+
+        +keyframes(owl-mom__eyes)
+            0%
+                +translate(0, 0)
+
+            40%, 80%
+                +translate(0, 6px)
+
+            90%, 100%
+                +translate(5px, 4px)
+
+    &__wing-left
+        +animation(wing-left 3s linear forwards)
+        +transform-origin(13%, 50%)
+
+        +keyframes(wing-left)
+            0%, 100%
+                +transform(rotate(0deg))
+
+            50%
+                +transform(rotate(120deg))
+
+            70%
+                +translate(0, 0)
+
+            80%
+                +transform(translate(3px, 0) rotate(-6deg))
+
+            90%
+                +translate(0, 0)
+
+    &__wing-right
+        +animation(wing-right 3s linear forwards)
+        +transform-origin(87%, 50%)
+
+        +keyframes(wing-right)
+            0%
+                +transform(rotate(0deg))
+
+            50%
+                +transform(rotate(-130deg))
+
+            70%
+                +translate(0, 0)
+
+            80%
+                +transform(rotate(6deg))
+                +translate(-3px, 0)
+            90%
+                +translate(0, 0)
+
+            100%
+                +transform(rotate(0deg))
+
+.b-owl-daughter
+    +animation(owl-daughter 4s ease-in forwards)
+    +transform-origin(30%, 80%)
+
+    +keyframes(owl-daughter)
+        0%
+            +opacity(0)
+            +transform(translate(20px, 160px) rotate(-3deg))
+
+        70%
+            +opacity(0)
+            +transform(translate(20px, 160px) rotate(-3deg))
+
+        80%
+            +transform(translate(8px, 18px) rotate(-3deg))
+            +opacity(1)
+
+        90%
+            +transform(translate(8px, -18px) rotate(3deg))
+
+        100%
+            +transform(translate(0, 0) rotate(0deg))
+
+    &__eyes
+        +animation(owl-daughter__eyes 4.5s linear forwards)
+
+        +keyframes(owl-daughter__eyes)
+            0%
+                +translate(0, 0)
+
+            40%, 90%
+                +translate(0, -6px)
+
+            95%, 100%
+                +translate(-3px, 0)
+
+    &__wing-left
+        +animation(daughter-wing-left 4.5s linear forwards)
+        +transform-origin(13%, 50%)
+
+        +keyframes(daughter-wing-left)
+            0%, 60%
+                +transform(rotate(0deg))
+
+            70%
+                +transform(rotate(120deg))
+
+            90%
+                +translate(0, 0)
+
+            95%
+                +transform(translate(3px, 0) rotate(-6deg))
+
+            98%
+                +translate(0, 0)
+
+    &__wing-right
+        +animation(daughter-wing-right 4.5s linear forwards)
+        +transform-origin(87%, 50%)
+
+        +keyframes(daughter-wing-right)
+            0%, 60%
+                +transform(rotate(0deg))
+
+            70%
+                +transform(rotate(-120deg))
+
+            90%
+                +translate(0, 0)
+
+            95%
+                +transform(translate(-3px, 0) rotate(6deg))
+
+            98%
+                +translate(0, 0)
+
+.b-owl-boy
+    +animation(owl-boy 3s ease-in forwards)
+    +transform-origin(30%, 80%)
+
+    +keyframes(owl-boy)
+        0%
+            +opacity(0)
+            +transform(translate(0, 160px) rotate(-3deg))
+
+        70%
+            +opacity(0)
+            +transform(translate(0, 160px) rotate(-3deg))
+
+        80%
+            +transform(translate(0, 18px) rotate(-3deg))
+            +opacity(1)
+
+        85%
+            +transform(translate(0, -28px) rotate(3deg))
+
+        100%
+            +transform(translate(0, 0) rotate(0deg))
+
+    &__eyes
+        +animation(owl-boy-eyes 6s linear forwards)
+
+        +keyframes(owl-boy-eyes)
+            0%
+                +translate(0, 0)
+
+            50%
+                +translate(0, 0)
+
+            60%, 70%
+                +translate(2px, 0)
+
+            80%, 90%
+                +translate(-2px, 0)
+
+            100%
+                +translate(0, 0)
+
+    &__wing-left
+        +animation(owl-boy-wing-left 4s linear forwards)
+        +transform-origin(13%, 50%)
+
+        +keyframes(owl-boy-wing-left)
+            0%, 60%
+                +transform(rotate(0deg))
+
+            70%
+                +transform(rotate(120deg))
+
+            75%
+                +transform(rotate(50deg))
+
+            80%
+                +transform(rotate(120deg))
+
+            90%
+                +translate(0, 0)
+
+            95%
+                +transform(translate(3px, 0) rotate(-6deg))
+
+            98%
+                +translate(0, 0)
+
+    &__wing-right
+        +animation(owl-boy-wing-right 4s linear infinite forwards)
+        +transform-origin(87%, 50%)
+
+        +keyframes(owl-boy-wing-right)
+            0%, 60%
+                +transform(rotate(0deg))
+
+            70%
+                +transform(rotate(-120deg))
+
+            75%
+                +transform(rotate(-50deg))
+
+            80%
+                +transform(rotate(-120deg))
+
+            90%
+                +translate(0, 0)
+
+            95%
+                +transform(translate(-3px, 0) rotate(6deg))
+
+            98%
+                +translate(0, 0)
+
+.b-alarm-clock__bell-left, .b-alarm-clock__bell-right
+    +animation(alarm-clock .1s infinite)
+
+    +keyframes(alarm-clock)
+        0%, 100%
+            +rotateZ(0deg)
+
+        25%
+            +rotateZ(-5deg)
+
+        50%
+            +rotateZ(5deg)
+
+.b-cloud__one
+    +animation(cloud-one 40s linear infinite)
+
+    +keyframes(cloud-one)
+        0%, 100%
+            +translate(0, 0)
+            +opacity(0)
+        1%
+            +opacity(1)
+
+        99.9999%
+            +translateX(859px)
+
+.b-cloud__two
+    +animation(cloud-one 50s linear infinite)
+
+    +keyframes(cloud-one)
+        0%, 100%
+            +translate(0, 0)
+            +opacity(0)
+        1%
+            +opacity(1)
+
+        99.9999%
+            +translateX(859px)
+
+.b-cloud__three
+    +animation(cloud-one 30s linear infinite)
+
+    +keyframes(cloud-one)
+        0%, 100%
+            +translate(0, 0)
+            +opacity(0)
+        1%
+            +opacity(1)
+
+        99.9999%
+            +translateX(859px)
+
+.b-sun
+    +animation(sun 8s linear infinite)
+
+    +keyframes(sun)
+        0%, 100%
+            +translate(0, 0)
+
+        20%
+            +rotate(10deg)
+
+        40%
+            +rotate(0deg)
+
+    &__sunshine-right
+        +animation(sunshine-right 8s linear infinite)
+
+        +keyframes(sunshine-right)
+
+            49%
+                +rotate(0)
+
+            50%
+                +rotate(10deg)
+                +transform-origin(75%, 45%)
+
+            55%
+                +rotate(-10deg)
+
+            60%
+                +rotate(10deg)
+
+            65%
+                +rotate(-10deg)
+
+            70%
+                +rotate(0deg)
+
+    &__sunshine-left
+        +animation(sunshine-left 8s linear infinite)
+
+        +keyframes(sunshine-left)
+
+            49%
+                +rotate(0)
+
+            50%
+                +rotate(3deg)
+                +transform-origin(30%, 85%)
+
+            55%
+                +rotate(-1deg)
+
+            60%
+                +rotate(1deg)
+
+            65%
+                +rotate(-1deg)
+
+            70%
+                +rotate(0deg)
+
+
+
+
+

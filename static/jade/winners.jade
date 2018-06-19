@@ -1,0 +1,144 @@
+//- winners.jade
+
+mixin winners-list
+	.b-table__tr
+		.b-table__td
+		.b-table__td: img(src="/images/winner-icon-small.png")
+		.b-table__td Вера, 4 года и мама озвучили мультфильм
+			br
+			| «Как мовята умываться учились»
+		.b-table__td 9879
+			i.icon-heart
+		.b-table__td: a(href="#"): img(src="/images/list-winner-btn.png")
+		.b-table__td
+
+mixin item
+	.item
+		.b-table
+			- var n = 0
+			while n < 5
+				+winners-list
+				- n++
+
+mixin hundred
+	+item
+
+mixin thousand
+	+item
+
+mixin all
+	+item
+
+doctype html
+html(lang="ru")
+	- var title = "kinder - победители"
+	include ../includes/_head
+
+	body.winners
+		- var currentUrl = "победители"
+		include ../includes/_header
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							a(href="/")
+								h1 Вкусное утро с
+								img(src="/images/logo.svg")
+
+							h2 Поздравляем победителей
+
+				.row
+					.small-9.columns.small-centered
+
+						// main winner
+						section.b-main-winner
+
+							.row
+								.small-5.columns
+									h1 Главный
+										br
+										| приз
+
+								.small-7.columns
+									.text-center
+										img(src="/images/winner-icon.png")
+										.btn-voce
+										p Экскурсию на студию создавшую мультсериал "Маша и медведь" получают
+
+									.row
+										.small-6.columns
+											div.user.text-right Валера, 4 года
+												br
+												| и мама
+
+										.small-6.columns
+											div.user.text-left
+												i.icon-heart
+												| 25654
+
+						// /main winner
+
+				.row
+					.small-12.columns
+
+						// creative
+						- var type = "b-block-winner--creative"
+						- var headingText2 = "креативный"
+						include ../includes/_block-winner
+						// /creative
+
+				.row
+					.small-12.columns
+
+						// funny
+						- var type = "b-block-winner--funny"
+						- var headingText2 = "смешной"
+						include ../includes/_block-winner
+						// /funny
+
+				.row
+					.small-12.columns
+
+						// touching
+						- var type = "b-block-winner--touching"
+						- var headingText2 = "трогательный"
+						include ../includes/_block-winner
+						// /touching
+
+				.row
+					.small-11.small-centered.columns
+						ul.info-nav.js-info-nav
+							li: a(href="#", data-toggle=".js-owl-list-hundred") Получают 500р
+							li: a(href="#", data-toggle=".js-owl-list-thousand") Получают 1000р
+							li: a(href="#", data-toggle=".js-owl-list-all") Все участники
+
+						// list winners
+						.b-list-winners.js-info
+
+							.js-owl-list-hundred.owl-carousel.owl-theme
+								- var n = 0
+								while n < 3
+									+hundred
+									- n++
+
+							.js-owl-list-thousand.owl-carousel.owl-theme
+								- var n = 0
+								while n < 2
+									+thousand
+									- n++
+
+							.js-owl-list-all.owl-carousel.owl-theme
+								- var n = 0
+								while n < 4
+									+all
+									- n++
+						// /list winners
+
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

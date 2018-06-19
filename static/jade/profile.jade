@@ -1,0 +1,120 @@
+//- profile.jade
+
+mixin profile-list
+		.b-table__tr
+			.b-table__td
+			.b-table__td
+				a.play(href="#"): img(src="/images/list-winner-btn.png", width="73")
+				.info.info--small
+					span.name-cartoon Мультфильм «Как Жуки общаться учились»
+			.b-table__td
+				.written записано 20.10.2015
+			.b-table__td
+
+mixin item
+	.item
+		.b-table.competition.competition--border
+			- var n = 0
+			while n < 3
+				+profile-list
+				- n++
+
+doctype html
+html(lang="ru")
+	- var title = "kinder - профайл"
+	include ../includes/_head
+
+	body.profile
+		include ../includes/_header
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							a(href="/")
+								h1 Вкусное утро с
+								img(src="/images/logo.svg")
+
+				// profile
+				.b-profile
+					.row
+						.small-2.columns
+							.b-profile__user-photo
+								img(src="/images/winner-icon.png")
+						.small-6.columns
+							.b-profile__user-info
+								p Наталья Дергачова
+									span dergachova@gmail.com
+									span 7 (xxx)  xxx-xx-xx
+						.small-4.columns
+							.b-profile__edit
+								a.btn.btn__primary.btn--edit.btn--expand
+									i.icon-edit
+									| Редактировать
+				// profile
+
+				.row
+					.small-12.columns
+
+						h2.text-center Ваши
+							br
+							| мультфильмы
+
+						// list winners
+						.b-list-winners
+							.b-table.competition
+								.b-table__tr
+									.b-table__td
+									.b-table__td.text-left
+										h3 Конкурсные
+									.b-table__td
+									.b-table__td
+
+								.b-table__tr
+									.b-table__td
+									.b-table__td
+										a.play(href="#"): img(src="/images/list-winner-btn.png")
+										.info
+											| отправленно 20.10.2015
+											=" "
+											span.approved одобрено
+											br
+											span.name-cartoon Мультфильм «Как Жуки общаться учились»
+											=" "
+											a(href="http://www.youtube.com/watch?v=cyJwZhsCRMU") http://www.youtube.com/watch?v=cyJwZhsCRMU
+											br
+											=" "
+											span Голосование проходит на канале YouTube
+									.b-table__td
+											a.btn.btn__primary.btn--small Скачать
+
+									.b-table__td
+										.likes
+											i.icon-heart
+											.like 9879
+							br
+							br
+							.b-table.competition
+								.b-table__tr
+									.b-table__td
+									.b-table__td.text-left
+										h3 Озвученные
+									.b-table__td
+									.b-table__td
+
+
+							.js-owl-list-profile.owl-carousel.owl-theme
+								- var n = 0
+								while n < 3
+									+item
+									- n++
+
+
+						// /list winners
+
+		// /container
+		// footer
+		include ../includes/_footer
+		// /footer

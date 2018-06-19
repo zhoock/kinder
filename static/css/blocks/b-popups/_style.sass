@@ -1,0 +1,225 @@
+// Popups
+//
+//
+
+.without-scrolling
+    overflow-y: hidden
+
+.b-modal-overlay
+    position: fixed
+    visibility: hidden
+    padding: 13rem 0
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1000
+    opacity: 0
+    overflow-x: hidden
+    overflow-y: auto
+    background: rgba(0, 158, 227, 0.8)
+    +transition(all 0.3s)
+
+    &.open
+        opacity: 1
+        visibility: visible
+
+.b-modal
+    width: 790px
+    margin: auto
+    height: auto
+    z-index: 2000
+
+/* Effect 1: Slide from the bottom */
+.b-modal-effect-1 .b-modal-content
+    +translateY(20%)
+    opacity: 0
+    +transition(all 0.3s)
+
+.open .b-modal-effect-1 .b-modal-content
+    +translateY(0)
+    opacity: 1
+
+/* Content styles */
+.b-modal-content
+    color: #929292
+    background: white url(/images/popup-footer-bg.png) no-repeat center bottom
+    position: relative
+    border-radius: 51px
+    margin: 0 auto
+    padding: 48px 12% 194px
+
+    .logo
+        width: 241px
+        height: 114px
+
+    h1
+        font-weight: $bold
+        +adjust-font-size-to(4rem)
+        +rhythm-margins(2, 1)
+        color: $dark-blue
+
+    form
+        +rhythm-margins(0, .5)
+
+    &--disclamer
+
+        p
+            color: #929292
+            +adjust-font-size-to(1.8rem)
+            +rhythm-margins(0, 2)
+            font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+
+        input
+            width: 26%
+
+            &:nth-of-type(2)
+                margin: 0 8px
+
+    &--thanks
+        h1
+            +adjust-font-size-to(4.8rem)
+            +rhythm-margins(4, 2)
+
+    &--pass
+        h1
+            +adjust-font-size-to(3rem)
+            +rhythm-margins(4, 2)
+
+    &--feedback
+
+        .b-owl-daughter
+            +owl-daughter(94, 111, 197, 100)
+
+        h1
+            +adjust-font-size-to(4rem)
+            +rhythm-margins(4, 4)
+
+    &--registration
+
+        .b-owl-daughter
+            +owl-daughter(94, 111, 230, 100)
+
+        h1
+            +adjust-font-size-to(4rem)
+            +rhythm-margins(4, 3)
+
+        .btn
+            +rhythm-margins(3, 0)
+
+        h2
+            +adjust-font-size-to(3rem)
+            +rhythm-margins(2, 2)
+            color: $dark-blue
+            font-weight: $bold
+
+        .telephone
+            +rhythm-margins(0, 2)
+
+            span
+                font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+                +adjust-font-size-to(2rem)
+
+            input:nth-of-type(1)
+                width: 30%
+                margin: 0 1.2%
+
+            input:nth-of-type(2)
+                width: 62%
+
+    &--authorization
+        .b-owl-daughter
+            +owl-daughter(94, 111, 185, 100)
+
+        h1
+            +adjust-font-size-to(4rem)
+            +rhythm-margins(4, 3)
+
+        .btn
+            +rhythm-margins(2, 0)
+
+        h2
+            +adjust-font-size-to(3rem)
+            +rhythm-margins(2, 2)
+            color: $dark-blue
+            font-weight: $bold
+
+        .forgot-password
+            +adjust-font-size-to(1.4rem)
+            text-decoration: underline
+            display: block
+            font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+
+    .b-modal__close
+        display: block
+        width: 63px
+        height: 63px
+        border-radius: 50%
+        +transition(all .25s ease-out)
+        position: absolute
+        top: 30px
+        right: 30px
+        +background(linear-gradient(#ef6b2c 0%, #e64313 100%))
+        +box-shadow(#b0350e 0 -4px 0 0 inset, #e1e1e1 0 2px 4px 0)
+
+        i
+            color: white
+            font-size: 32px
+            line-height: 60px
+            font-weight: $bold
+            +text-shadow(#b8785d 0 -1px 0)
+
+        &:hover
+            +background(white)
+            +box-shadow(#c6c6c6 0 0 1px 0 inset)
+
+            i
+                color: $dark-blue
+                +text-shadow(none)
+
+.b-social-networks
+    li
+        display: inline-block
+
+        &:nth-of-type(2)
+            a
+                margin: 0 10px
+
+        a
+            display: block
+            width: 63px
+            height: 63px
+            border-radius: 50%
+            +transition(all .25s ease-out)
+
+
+            &.f
+                +background(linear-gradient(#526ead 0%, #2d458a 100%))
+                +box-shadow(#203773 0 -4px 0 0 inset, #e1e1e1 0 2px 4px 0)
+
+                &:hover
+                    +background(white)
+                    +box-shadow(#c6c6c6 0 0 1px 0 inset)
+
+            &.vk
+                +background(linear-gradient(#6586a9 0%, #3c5e85 100%))
+                +box-shadow(#2d4c70 0 -4px 0 0 inset, #e1e1e1 0 2px 4px 0)
+
+                &:hover
+                    +background(white)
+                    +box-shadow(#c6c6c6 0 0 1px 0 inset)
+
+            &.g
+                +background(linear-gradient(#e46048 0%, #d63925 100%))
+                +box-shadow(#a42e1f 0 -4px 0 0 inset, #e1e1e1 0 2px 4px 0)
+
+                &:hover
+                    +background(white)
+                    +box-shadow(#c6c6c6 0 0 1px 0 inset)
+
+            i
+                color: white
+                font-size: 52px
+                line-height: 60px
+                font-weight: $regular
+                +text-shadow(#b8785d 0 -1px 0)            

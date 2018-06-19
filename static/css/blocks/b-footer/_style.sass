@@ -1,0 +1,39 @@
+// Footer
+//
+//
+
+
+footer
+    height: 238px
+    padding-top: 170px
+    background: transparent url("/images/footer-bg.jpg") no-repeat
+
+    .b-container
+        background-color: inherit
+
+    nav
+
+        ul
+            +pie-clearfix
+            margin-bottom: 0
+
+            &.logos
+                li
+                    margin-right: 0
+                    color: white
+                    +adjust-font-size-to(1.6rem)
+
+                    a:nth-child(2)
+                        position: relative
+                        top: -9px
+
+            li
+                float: left
+                margin-right: 6%
+
+                a:link, a:visited
+                    +adjust-font-size-to(1.6rem)
+                    color: white
+
+                    &:hover
+                        text-decoration: underline

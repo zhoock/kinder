@@ -1,0 +1,37 @@
+//- includes/_header.jade
+
+header(role="banner")
+	.b-container
+
+		.row
+			.small-10.columns
+				nav(role="navigation")
+					ul.b-menu
+						each val in ["правила", "призы", "продукт", "победители"]
+							li
+								a.btn.btn__primary(href="#" + val, class={btn__active: currentUrl === val})
+									=val
+							=" "
+
+			.small-2.columns
+
+				if authorizedUser
+
+					// Account
+					.b-account
+						ul
+							li: a(href="#") Выйти
+							li: a(href="#") Регистрация
+					// /Account
+
+				else
+
+					// Account
+					.b-account
+						ul
+							li.sign-in: a.js-trigger-modal(href="#", data-modal="modal-1", class={active: linkActive === "active"})
+								| Вход
+								i.icon-enter
+							li.sign-up: a(href="#") Регистрация
+
+					// /Account

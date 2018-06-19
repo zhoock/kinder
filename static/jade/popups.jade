@@ -1,0 +1,327 @@
+//- popups.jade
+
+doctype html
+html(lang="ru")
+	- var title = "kinder - всплывающие окна"
+	include ../includes/_head
+
+	body.index
+		include ../includes/_header
+
+		// overlay
+		.b-modal-overlay.js-modal-overlay
+
+			// modals
+
+			// disclamer
+			//.b-modal.b-modal-effect-1
+			//	section.b-modal-content.b-modal-content--disclamer.text-center
+			//		a.b-modal__close.js-modal__close
+							i.icon-cross2
+			//		img.logo(src="/images/logo.svg")
+			//		h1 Уважаемые родители!
+			//		p Мы просим Вас ввести дату своего рождения.
+			//
+			//		form
+			//			input(type="text", placeholder="ДД")
+			//			input(type="text", placeholder="ММ")
+			//			input(type="text", placeholder="ГГГГ")
+			//
+			//			.text-center
+			//				a.btn.btn__primary Готово
+			// /disclamer
+
+			// thanks
+			//.b-modal.b-modal-effect-1
+			//	section.b-modal-content.b-modal-content--thanks.text-center
+			//		a.b-modal__close.js-modal__close
+							i.icon-cross2
+			//		img.logo(src="/images/logo.svg")
+			//		h1 Спасибо!
+			// /thanks
+
+			// pass
+			//.b-modal.b-modal-effect-1
+			//	section.b-modal-content.b-modal-content--pass.text-center
+			//		a.b-modal__close.js-modal__close
+							i.icon-cross2
+			//		img.logo(src="/images/logo.svg")
+			//		h1 Новый пароль будет выслан вам
+			//			br
+			//			| на указанную почту.
+			//
+			//		form
+			//			input.small(type="text", placeholder="E-mail")
+			//
+			//			.text-center
+			//    		a.btn.btn__primary Готово
+			// /pass
+
+			// feedback
+			//.b-modal.b-modal-effect-1
+			//	section.b-modal-content.b-modal-content--feedback.text-center
+			//		a.b-modal__close.js-modal__close
+			//			i.icon-cross2
+			//		img.logo(src="/images/logo.svg")
+			//		h1 Обратная связь
+			//
+			//		// owl-daughter
+			//		.b-owl-daughter
+			//			.b-owl-daughter__wing-left
+			//			.b-owl-daughter__wing-right
+			//			.b-owl-daughter__body
+			//			.b-owl-daughter__bow
+			//			.b-owl-daughter__eyes
+			//			.b-owl-daughter__eyelids
+			//			.b-owl-daughter__nose
+			//			.b-owl-daughter__legs
+			//		// /owl-daughter
+			//
+			//		form
+			//			input(type="text", placeholder="Имя")
+			//			input(type="text", placeholder="E-mail")
+			//			input(type="text", placeholder="Тема сообщения")
+			//			textarea(placeholder="Текст")
+			//
+			//			.text-center
+			//				a.btn.btn__primary Отправить
+			// /feedback
+
+			// registration
+			//.b-modal.b-modal-effect-1
+			//	section.b-modal-content.b-modal-content--registration.text-center
+			//		a.b-modal__close.js-modal__close
+			//			i.icon-cross2
+			//		img.logo(src="/images/logo.svg")
+			//		h1 Представьтесь,
+			//			br
+			//			| пожалуйста
+			//
+			//		// owl-daughter
+			//		.b-owl-daughter
+			//			.b-owl-daughter__wing-left
+			//			.b-owl-daughter__wing-right
+			//			.b-owl-daughter__body
+			//			.b-owl-daughter__bow
+			//			.b-owl-daughter__eyes
+			//			.b-owl-daughter__eyelids
+			//			.b-owl-daughter__nose
+			//			.b-owl-daughter__legs
+			//		// /owl-daughter
+			//
+			//		form.text-left
+			//			input(type="text", placeholder="Имя")
+			//			input(type="text", placeholder="Фамилия")
+			//			input(type="text", placeholder="E-mail")
+			//			input(type="password", placeholder="Пароль")
+			//			input(type="text", placeholder="Тема сообщения")
+			//			.telephone
+			//				span +7
+			//				input(type="text", placeholder="xxx")
+			//				input(type="text", placeholder="xxx-xx-xx")
+			//
+			//			input#check1(type="checkbox", checked)
+			//			label(for="check1") мне более 18 полных лет
+			//			input#check2(type="checkbox")
+			//			label(for="check2") согласен с обработкой
+			//				=" "
+			//				a(href="#") персональных данных
+			//			input#check3(type="checkbox")
+			//			label(for="check3") принимаю
+			//				=" "
+			//				a(href="#") правила конкурса
+			//			input#check4(type="checkbox")
+			//			label(for="check4") подтверждаю авторство на все представленные мной материалы
+			//
+			//			input#check4(type="checkbox")
+			//			label(for="check4") являюсь законным прдставителем ребёнка (детей), принявшего(ших) участие в озвучиваниии мультфильма
+			//
+			//			.text-center
+			//				a.btn.btn__primary Готово
+			//		h2 Или войдите через соцсети:
+			//		ul.b-social-networks
+			//			li: a.f(href="#")
+			//			li: a.vk(href="#")
+			//			li: a.g(href="#")
+			// /registration
+
+			// authorization
+			.b-modal.b-modal-effect-1
+				section.b-modal-content.b-modal-content--authorization.text-center
+					a.b-modal__close.js-modal__close
+						i.icon-cross2
+					img.logo(src="/images/logo.svg")
+					h1 Авторизация
+
+					// owl-daughter
+					.b-owl-daughter
+						.b-owl-daughter__wing-left
+						.b-owl-daughter__wing-right
+						.b-owl-daughter__body
+						.b-owl-daughter__bow
+						.b-owl-daughter__eyes
+						.b-owl-daughter__eyelids
+						.b-owl-daughter__nose
+						.b-owl-daughter__legs
+					// /owl-daughter
+
+					form
+						input(type="text", placeholder="E-mail")
+						input(type="password", placeholder="Пароль")
+
+						a.forgot-password(href="#") Я не помню пароль
+
+						.text-center
+							a.btn.btn__primary Готово
+					h2 Или войдите через соцсети:
+					ul.b-social-networks
+						li: a.f(href="#")
+							i.icon-f
+						li: a.vk(href="#")
+							i.icon-vk
+						li: a.g(href="#")
+							i.icon-g
+			// /authorization
+
+			// /modals
+
+
+
+		// /overlay
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							h1 Вкусное утро с
+							img(src="/images/logo.svg")
+				.row
+					.small-10.columns.small-centered
+						// sun
+						.b-sun
+							.b-sun__sunshine-left
+							.b-sun__sunshine-right
+						// /sun
+						// clouds
+						.b-cloud
+							.b-cloud__one
+							.b-cloud__two
+							.b-cloud__three
+						// /clouds
+						// tree
+						.b-tree
+						// /tree
+						// lark__sleepy
+						.b-lark__sleepy
+						// /lark__sleepy
+						// larks
+						.b-larks
+						// /larks
+						// blades
+						.b-blades
+						// /blades
+						// kinder
+						.b-kinder
+						// /kinder
+						// alarm-clock
+						.b-alarm-clock
+							.b-alarm-clock__body
+							.b-alarm-clock__bell-left
+							.b-alarm-clock__bell-right
+						// /alarm-clock
+						// owl-bubble
+						.b-owl-bubble
+							p Как хорошо проснуться
+								br
+								| и улыбнуться новому дню!
+						// /owl-bubble
+						// owl-mom
+						.b-owl-mom
+							.b-owl-mom__wing-left
+							.b-owl-mom__wing-right
+							.b-owl-mom__body
+							.b-owl-mom__eyes
+							.b-owl-mom__legs
+						// /owl-mom
+						// owl-daughter
+						.b-owl-daughter
+							.b-owl-daughter__wing-left
+							.b-owl-daughter__wing-right
+							.b-owl-daughter__body
+							.b-owl-daughter__bow
+							.b-owl-daughter__eyes
+							.b-owl-daughter__eyelids
+							.b-owl-daughter__nose
+							.b-owl-daughter__legs
+						// /owl-daughter
+						// owl-boy
+						.b-owl-boy
+							.b-owl-boy__wing-left
+							.b-owl-boy__wing-right
+							.b-owl-boy__body
+							.b-owl-boy__eyes
+							.b-owl-boy__eyelids
+							.b-owl-boy__nose
+							.b-owl-boy__legs
+						// /owl-boy
+				.row
+					.small-10.columns.small-centered
+						section.b-scope
+							.b-scope__one Принимай участие
+								br
+								| в конкурсе
+							.b-scope__two Озвучивай» мультфильм
+								br
+								| вместе с ребенком
+							.b-scope__three Получай призы
+								br
+								| от киндер
+				.row
+					.small-10.columns.small-centered
+						//b-cartoons
+						section.b-cartoons
+							h1.text-center Мультфильмы
+							.b-cloud-bubble
+								p Пусть в мультфильме звучат
+									br
+									| ваши голоса!
+									br
+									span Нажмите на кнопку «озвучить»
+										br
+										| и прочитайте вслух слова птичек.
+										br
+										| Послушайте, что получилось!
+							.js-owl-cartoons.owl-carousel.owl-theme
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+							// cloud-cheerful
+							.b-cloud-cheerful
+								.b-cloud-cheerful__hand-left
+								.b-cloud-cheerful__hand-right
+								.b-cloud-cheerful__eyes
+							// /cloud-cheerful
+						// /b-cartoons
+
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

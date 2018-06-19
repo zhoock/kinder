@@ -1,0 +1,23 @@
+//- includes/_footer
+
+footer(role="contentinfo")
+	.b-container
+		.row
+			.small-9.columns.small-centered
+				.row
+					.small-6.columns
+						nav
+							ul
+								each val in ["Полные правила", "Обраная связь"]
+									li: a(href="#")= val
+
+					.small-6.columns
+						nav
+							ul.logos
+								li: a(href="#"): img(src="/images/ferrero-logo.jpg")
+								li: a(href="#"): img(src="/images/ferrero-foodservice-logo.jpg")
+								li copyright &copy; 2015
+
+script(src='/js/engine.min.js')
+
+

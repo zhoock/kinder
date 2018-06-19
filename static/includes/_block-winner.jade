@@ -1,0 +1,40 @@
+//- includes/_block-winner
+
+mixin block-winner
+	.small-4.columns
+		.b-block-party
+			img(src="/images/party-block-user.png")
+			.b-block-party__frame
+			.btn-voce
+		.b-block-party__user
+			.row
+				.small-5.small-offset-1.columns
+					.user Валера, 4 года
+						br
+						| и мама
+				.small-5.columns.text-right.end
+					.user 9879
+						=" "
+						i.icon-heart
+
+
+section.b-block-winner(class=type)
+	h1.text-center Самый
+		br
+		| #{headingText2}
+
+	.b-block-winner__description
+		p Сертификат в магазин Ozon.ru
+			br
+			| на сумму
+			=" "
+			span.sum= 10000
+				=" "
+				| рублей
+			=" "
+			| получают
+
+	.row
+		+block-winner
+		+block-winner
+		+block-winner

@@ -1,0 +1,125 @@
+// Prize
+//
+//
+
+.prize
+    background: transparent url(/images/prize-bg.jpg) no-repeat center top
+
+    .b-container
+        .b-content
+            h1
+                @extend %heading
+
+            // TODO: заменить png на svg и убрать этот код, оставив только позиционирование
+            .b-sun
+                +sun(215, 194, 26, 20)
+                background-size: contain
+
+            .b-main-prize
+                width: 270px
+                margin: 253px 0 190px 440px
+                color: white
+
+                h1
+                    color: white
+                    +rhythm-margins(0, 1)
+                    +adjust-font-size-to(6rem)
+                    +text-shadow(#4b7782 0 2px 3px)
+
+                p:nth-of-type(1)
+                    +adjust-font-size-to(2.4rem)
+                    font-weight: $bold
+                    font-family: $header-font-family
+                    text-transform: uppercase
+
+                p:nth-of-type(2)
+                    +adjust-font-size-to(1.6rem)
+
+                    a:link, a:visited
+                        color: white
+                        text-decoration: underline
+
+            .b-alarm-clock
+                +alarm-clock(171, 218, -268, 698)
+
+            .b-alarm-clock
+                +alarm-clock(171, 218, -260, 698)
+                +rotate(19deg)
+
+            .b-owl-boy
+                +owl-boy(94, 98, -23, -126)
+
+            .b-lark-boy
+                +element(absolute, 65px, 86px, -252px, 607px, lark-boy)
+
+            .b-owl-mom
+                +owl-mom(153, 186, -170, 338)
+
+            .b-block-prize
+                width: 100%
+                height: 407px
+                background: transparent url(/images/block-prize-bg.png) no-repeat
+                background-size: contain
+                padding: 60px 12px 12px 30px
+
+                &.shift
+                    top: -122px
+                    position: relative
+
+                h2
+                    +adjust-font-size-to(2.7rem)
+                    +rhythm-margins(0, 3)
+                    color: #009ee3
+                    text-transform: uppercase
+                    position: relative
+                    font-weight: $bold
+                    display: table
+
+                    span
+                        display: table-cell
+                        vertical-align: middle
+                        padding: 0 14px 0 0
+
+                        &:nth-of-type(1)
+                            font-size: 7rem
+                            color: #ec551a
+
+                        &:nth-of-type(2)
+                            display: table-cell
+
+                &__certificate
+                    float: left
+                    width: 160px
+
+                &__description
+                    padding-left: 190px
+                    +adjust-font-size-to(1.6rem)
+
+                    p:first-of-type
+                        font-weight: $bold
+                        font-family: $header-font-family
+
+                    p:last-of-type
+                        color: #505050
+
+                        a
+                            color: #009ee3
+                            text-decoration: underline
+
+                    .sum
+                        color: #ec551a
+                        text-transform: uppercase
+
+            .b-cloud-cheerful
+                +cloud-cheerful(180, 97, 0, -202)
+
+            // TODO: заменить png на svg
+            .b-microphone
+                +element(absolute, 70px, 177px, 22px, -53px, microphone)
+                background-image: url("/images/microphone.png")
+
+            // TODO: заменить png на svg
+            .b-headphones
+                +element(absolute, 121px, 189px, -184px, 845px, headphones)
+                background-image: url("/images/headphones.png")
+                z-index: 1

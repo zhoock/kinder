@@ -1,0 +1,51 @@
+//
+// Inputs
+// --------------------------------------------------
+
+[type="text"],
+[type="password"],
+[type="search"]
+    font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+    font-size: 2rem
+    color: $input-color
+    border: 1px $input-border-color solid
+    width: 100%
+    border-radius: $input-border-radius
+    padding: 18px 26px
+    background: #fff
+    +rhythm-margins(0, 1.5)
+    -webkit-appearance: none
+    +transition(all .25s ease-out)
+    +input-placeholder
+        color: $input-color
+
+    &:focus
+        border-color: $dark-blue
+
+    &.error
+        border-color: $error-color
+        color: $error-color
+
+        &:focus
+            border-color: $error-color
+
+textarea
+    font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+    background: white
+    min-height: 264px
+    font-size: 2rem
+    color: $input-color
+    border: 1px $input-border-color solid
+    width: 100%
+    border-radius: $input-border-radius
+    padding: 18px 26px
+    +rhythm-margins(0, 1.5)
+    -webkit-appearance: none
+    +transition(all .25s ease-out)
+    +input-placeholder
+        color: $input-color
+
+    &:focus
+        border-color: #3ACEFF
+
+

@@ -1,0 +1,26 @@
+//- includes/_block-prize
+
+.b-block-prize(class=shift)
+
+	h2
+		span #{amount}
+		span
+			| #{headingText1}
+			br
+			| #{headingText2}
+
+	img.b-block-prize__certificate(src="/images/certificate" + num + ".png")
+
+	.b-block-prize__description
+		p Сертификат в магазин Ozon.ru
+			br
+			| на сумму
+			=" "
+			span.sum= price
+				=" "
+				| рублей
+		p Узнайте, как выиграть приз
+			br
+			| в разделе "
+			a(href="#") Правила
+			| "

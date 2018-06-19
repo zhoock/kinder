@@ -1,0 +1,51 @@
+// Кнопки
+//
+//
+
+=button-variant($color, $background, $box-shadow, $hover-background, $text-shadow, $disabled-background: #blue)
+    color: $color
+    +background($background)
+    +box-shadow($box-shadow 0 -4px 0 0 inset, #e1e1e1 0 2px 4px 0)
+    +text-shadow($text-shadow 0 -1px 0)
+
+    //&:focus,
+    &:hover,
+    &:active
+        color: #4cc9ff
+        +background($hover-background)
+        +box-shadow(#c6c6c6 0 0 1px 0 inset)
+        +text-shadow(none)
+
+    &.disabled,
+    &[disabled]
+        &:hover,
+        &:focus,
+        &:active
+            background-color: $disabled-background
+
+// Расположение элемента
+//
+//
+=element($position, $width, $height, $top, $left, $bg: null)
+    position: $position
+    top: $top
+    left: $left
+    width: $width
+    height: $height
+    @if $bg
+        background: transparent url("/images/#{$bg}.svg") no-repeat
+        background-size: contain
+
+// Расположение частей элемента
+//
+//
+=element-pos($img)
+    background: transparent url("/images/#{$img}.svg") no-repeat
+    background-size: contain
+    position: absolute
+    left: 0
+    top: 0
+    width: inherit
+    height: inherit
+
+

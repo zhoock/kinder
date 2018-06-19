@@ -1,0 +1,172 @@
+//- index.jade
+
+doctype html
+html(lang="ru")
+	- var title = "kinder - главная"
+	include ../includes/_head
+
+	body.index
+		include ../includes/_header
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.row
+					.small-12.columns
+						.text-center
+							a(href="/")
+								h1 Вкусное утро с
+								img(src="/images/logo.svg")
+
+				.row
+					.small-10.columns.small-centered
+
+						// sun
+						.b-sun
+							.b-sun__sunshine-left
+							.b-sun__sunshine-right
+						// /sun
+
+						// clouds
+						.b-cloud
+							.b-cloud__one
+							.b-cloud__two
+							.b-cloud__three
+						// /clouds
+
+						// tree
+						.b-tree
+						// /tree
+
+						// lark__sleepy
+						.b-lark__sleepy
+						// /lark__sleepy
+
+						// larks
+						.b-larks
+						// /larks
+
+						// blades
+						.b-blades
+						// /blades
+
+						// kinder
+						.b-kinder
+						// /kinder
+
+						// alarm-clock
+						.b-alarm-clock
+							.b-alarm-clock__body
+							.b-alarm-clock__bell-left
+							.b-alarm-clock__bell-right
+						// /alarm-clock
+
+						// owl-bubble
+						.b-owl-bubble
+							p Как хорошо проснуться
+								br
+								| и улыбнуться новому дню!
+						// /owl-bubble
+
+						// owl-mom
+						.b-owl-mom
+							.b-owl-mom__wing-left
+							.b-owl-mom__wing-right
+							.b-owl-mom__body
+							.b-owl-mom__eyes
+							.b-owl-mom__legs
+						// /owl-mom
+
+						// owl-daughter
+						.b-owl-daughter
+							.b-owl-daughter__wing-left
+							.b-owl-daughter__wing-right
+							.b-owl-daughter__body
+							.b-owl-daughter__bow
+							.b-owl-daughter__eyes
+							.b-owl-daughter__eyelids
+							.b-owl-daughter__nose
+							.b-owl-daughter__legs
+						// /owl-daughter
+
+						// owl-boy
+						.b-owl-boy
+							.b-owl-boy__wing-left
+							.b-owl-boy__wing-right
+							.b-owl-boy__body
+							.b-owl-boy__eyes
+							.b-owl-boy__eyelids
+							.b-owl-boy__nose
+							.b-owl-boy__legs
+						// /owl-boy
+
+				.row
+					.small-10.columns.small-centered
+						section.b-scope
+							.b-scope__one Принимай участие
+								br
+								| в конкурсе
+
+							.b-scope__two Озвучивай мультфильм
+								br
+								| вместе с ребенком
+
+							.b-scope__three Получай призы
+								br
+								| от Киндер
+
+				.row
+					.small-10.columns.small-centered
+
+						//b-cartoons
+						section.b-cartoons
+
+							h1.text-center Мультфильмы
+
+							.b-cloud-bubble
+								p Пусть в мультфильме звучат
+									br
+									| ваши голоса!
+									br
+
+									span Нажмите на кнопку «озвучить»
+										br
+										| и прочитайте вслух слова птичек.
+										br
+										| Послушайте, что получилось!
+
+							.js-owl-cartoons.owl-carousel.owl-theme
+
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+								.item
+									.btn-voce
+									img(src="/images/fullimage1.png")
+
+							// cloud-cheerful
+							.b-cloud-cheerful
+								.b-cloud-cheerful__hand-left
+								.b-cloud-cheerful__hand-right
+								.b-cloud-cheerful__eyes
+							// /cloud-cheerful
+
+						// /b-cartoons
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+

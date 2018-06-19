@@ -1,0 +1,24 @@
+//- pages.jade
+mixin link(href, name)
+	div
+		| #{name} -
+		=" "
+		a(href=href + ".html", target="_blank") #{href + ".html"}
+
+
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - список страниц"
+	head
+		meta(charset="utf-8")
+
+
+	body
+
+		+link("index","Главная")
+		+link("product","Продукт")
+		+link("prize","Призы")
+		+link("winners","Победители")
+		+link("participants","Участники")
+		+link("popups","Всплывающие окна")
+		+link("profile","Профайл")

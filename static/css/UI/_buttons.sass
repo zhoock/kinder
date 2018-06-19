@@ -1,0 +1,65 @@
+//
+// Buttons
+// --------------------------------------------------
+
+.btn
+    cursor: pointer
+    line-height: 1.2
+    +adjust-font-size-to(2rem)
+    font-weight: $bold
+    padding: 18px 0
+    min-width: 190px
+    max-width: 270px
+    text-align: center
+    display: inline-block
+    text-transform: uppercase
+    font-style: normal
+    border-radius: $border-radius
+    -webkit-font-smoothing: subpixel-antialiased
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    +transition(all .25s ease-out)
+
+    &.disabled,
+    &[disabled]
+        background-color: $blue
+        color: fade(white, 75%)
+        cursor: not-allowed
+        @include opacity(.7)
+
+    & + .btn
+        margin-left: 12px
+
+    &--expand
+        padding-left: 0
+        padding-right: 0
+        width: 100%
+
+    &--small
+        width: 140px
+        min-width: auto
+
+    &--edit
+        padding-left: 20px
+        position: relative
+
+        i
+            font-size: 3.7rem
+            position: absolute
+            left: 30px
+            top: 7px
+
+    &.btn__primary
+        +button-variant(white, linear-gradient($blue 20%, #2aaeff 100%), #1d8dda, white, #3a84a3, darken($blue, 10%))
+
+
+    &.btn__active
+        +button-variant(white, linear-gradient(#f2803e 20%, #e0310b 100%), #c42809, white, #983f18, darken($blue, 10%))
+        pointer-events: none
+
+
+

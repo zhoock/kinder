@@ -1,0 +1,105 @@
+// List-winners
+//
+//
+
+
+.b-list-winners
+    background: #f3f3f3
+    padding: 55px 0
+    border-radius: 50px
+    +rhythm-margins(8, 0)
+    position: relative
+
+    .b-table
+        display: table
+        width: 100%
+
+        &__tr
+            display: table-row
+
+            &:hover
+                background: #ddebf2
+
+                .b-table__td
+                    border-bottom-color: transparent
+
+            &:last-of-type
+                .b-table__td
+                    border-bottom: none
+
+        &__td
+            display: table-cell
+            padding: 8px 0
+            color: #505050
+            font-size: 1.8rem
+            vertical-align: middle
+            border-bottom: dotted 1px #a7a7a7
+
+            .price-prize
+                border-radius: 16px
+                font-size: 1.4rem
+                color: white
+                width: 62px
+                height: 30px
+                line-height: 30px
+                text-align: center
+                display: inline-block
+                font-weight: $bold
+                padding-top: 1px
+                font-family: $header-font-family
+
+                &--blue
+                    background: $blue
+                    margin-bottom: 8px
+
+                &--red
+                    background: $red
+
+
+            &:nth-of-type(1), &:last-of-type
+                width: 64px
+                border-bottom: none !important
+
+            //.participants
+            .participants &:nth-of-type(1)
+                width: 120px
+
+            .participants &:nth-of-type(6)
+                width: 50px
+
+            //.profile
+            .profile &:nth-of-type(1)
+                width: 92px
+
+            .profile &:nth-of-type(2)
+                width: 500px
+
+            .profile &:nth-of-type(3)
+                width: 190px
+
+            .profile &:nth-of-type(6)
+                width: 50px
+
+            &:nth-of-type(2)
+                width: 97px
+
+            &:nth-of-type(3)
+                padding: 0 26px
+
+            &:nth-of-type(5)
+                width: 73px
+
+            .icon-heart
+                color: #009ee3
+                font-size: 3.6rem
+                position: relative
+                top: 8px
+                margin-left: 8px
+
+
+    //.owl-carousel
+    .owl-prev
+        left: -58px !important
+
+    .owl-next
+        right: -58px !important

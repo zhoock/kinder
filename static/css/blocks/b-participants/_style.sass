@@ -1,0 +1,54 @@
+// Participants
+//
+//
+
+.participants
+    background: transparent url(/images/participants-bg.jpg) no-repeat center top
+
+    .b-container
+        .b-content
+            h1
+                @extend %heading
+
+            h2
+                +adjust-font-size-to(4.8rem)
+                font-weight: $bold
+                +rhythm-margins(8, 0)
+
+            .b-owl-daughter
+                +owl-daughter(94, 111, 187, 84)
+
+            .b-owl-boy
+                +owl-boy(94, 98, 192, -54)
+
+            .b-pagination
+                margin-top: 16px
+
+                &__pages
+                    margin-top: 22px
+
+                    li
+                        display: inline-block
+                        width: 50px
+                        height: 50px
+                        margin-right: 10px
+                        line-height: 50px
+                        text-align: center
+                        padding-top: 1px
+
+                        &.active
+                            a
+                                color: $red
+
+                        a
+                            font-size: 1.8rem
+                            background: #f3f3f3
+                            display: inline-block
+                            width: 100%
+                            height: 100%
+                            border-radius: 50%
+                            color: $dark-blue
+
+                            &:hover
+                                background: darken(#f3f3f3, 12%)
+                                color: white

@@ -1,0 +1,46 @@
+// checkbox & radiobutton
+//
+//
+
+.checkbox, .radio
+    cursor: pointer
+    position: relative
+    +transition(all 0.75s ease-out 0s)
+
+input[type="checkbox"],
+input[type="radio"]
+    font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+    height: auto
+    width: auto
+    left: -9999px
+    position: absolute
+    visibility: hidden
+
+input[type="checkbox"] + label
+    font-family: tahoma, arial, verdana, sans-serif, "Lucida Sans"
+    cursor: pointer
+    display: block
+    margin-top: -4px
+    +trailer(2)
+    position: relative
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    +adjust-font-size-to(1.8rem)
+
+    &::before
+        content: ""
+        width: 21px
+        height: 21px
+        margin-right: 12px
+        display: inline-block
+        vertical-align: middle
+        background: transparent url(/images/checkbox-unchecked.png) no-repeat
+
+input[type="checkbox"]:checked + label
+
+    &::before
+        background: transparent url(/images/checkbox-checked.png) no-repeat

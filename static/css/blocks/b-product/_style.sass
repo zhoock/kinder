@@ -1,0 +1,49 @@
+// Product
+//
+//
+
+.product
+    background: transparent url(/images/product-bg.jpg) no-repeat center top
+
+    .b-container
+        .b-content
+            h1
+                @extend %heading
+
+            .b-sun
+                +sun(215, 194, 26, 20)
+                background-size: contain
+
+            .b-prod-description
+                width: 417px
+                margin: 273px 0 270px 380px
+
+                p
+                    +adjust-font-size-to(1.4rem)
+                    color: white
+                    text-align: center
+
+            .b-kinder--big
+                +element(absolute, 574px, 253px, 239px, 166px, kinder-big)
+
+            .b-lark-mom
+                +element(absolute, 105px, 147px, -104px, -23px, lark-mom)
+
+            .b-lark-boy
+                +element(absolute, 65px, 86px, -136px, 716px, lark-boy)
+
+            .b-alarm-clock
+                +element(absolute, 171px, 218px, 336px, 690px)
+
+            .b-alarm-clock
+                +alarm-clock(171, 218, 336, 690)
+                +rotate(19deg)
+
+            .b-blades
+                +element(absolute, 70px, 70px, 266px, 304px, blades)
+
+            .b-owl-mom
+                +owl-mom(153, 186, 270, 138)
+
+            .b-owl-daughter
+                +owl-daughter(94, 111, 347, -78)
